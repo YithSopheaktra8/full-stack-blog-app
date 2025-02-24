@@ -13,6 +13,7 @@ export const ImageKit = ({ src, className, width, height, alt }) => {
       urlEndpoint={import.meta.env.VITE_IMAGEKIT_URL_ENDPOINT}
       loading="lazy"
       lqip={{ active: true, quality: 20 }}
+      transformation={[{ height, width }]}
       width={width}
       height={height}
     />
