@@ -10,7 +10,7 @@ const PostListItems = () => {
         <ImageKit
           src="postImg.jpeg"
           className="rounded-2xl object-cover"
-          width="800"
+          width="735"
         />
       </div>
       {/* details */}

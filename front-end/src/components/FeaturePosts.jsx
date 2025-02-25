@@ -12,6 +12,7 @@ const FeaturePosts = () => {
           src="/featured1.jpeg"
           alt="post1"
           className={`rounded-3xl object-cover`}
+          width="895"
         />
         {/* details */}
         <div className="flex items-center gap-4">
@@ -33,11 +34,14 @@ const FeaturePosts = () => {
       <div className="w-full lg:w-1/2 flex flex-col gap-4">
         {/* second */}
         <div className="flex justify-between h-1/3 gap-4">
-          <ImageKit
-            src="/featured2.jpeg"
-            alt="post2"
-            className="rounded-3xl object-cover w-1/3 aspect-video"
-          />
+          <div className="w-1/3 aspect-video ">
+            <ImageKit
+              src="/featured2.jpeg"
+              alt="post2"
+              className="rounded-3xl object-cover w-full h-full"
+              width="298"
+            />
+          </div>
           {/* detail and title */}
           <div className="w-2/3">
             <div className="flex items-center gap-4 text-sm lg:text-base mb-4">
@@ -57,11 +61,14 @@ const FeaturePosts = () => {
         </div>
         {/* third */}
         <div className="flex justify-between h-1/3 gap-4">
-          <ImageKit
-            src="/featured2.jpeg"
-            alt="post2"
-            className="rounded-3xl object-cover w-1/3 aspect-video"
-          />
+          <div className="w-1/3 aspect-video ">
+            <ImageKit
+              src="/featured3.jpeg"
+              alt="post2"
+              className="rounded-3xl object-cover w-full h-full"
+              width="298"
+            />
+          </div>
           {/* detail and title */}
           <div className="w-2/3">
             <div className="flex items-center gap-4 text-sm lg:text-base mb-4">
@@ -81,11 +88,14 @@ const FeaturePosts = () => {
         </div>
         {/* fourth */}
         <div className="flex justify-between h-1/3 gap-4">
-          <ImageKit
-            src="/featured2.jpeg"
-            alt="post2"
-            className="rounded-3xl object-cover w-1/3 aspect-video"
-          />
+          <div className="w-1/3 aspect-video ">
+            <ImageKit
+              src="/featured4.jpeg"
+              alt="post2"
+              className="rounded-3xl object-cover w-full h-full"
+              width="298"
+            />
+          </div>
           {/* detail and title */}
           <div className="w-2/3">
             <div className="flex items-center gap-4 text-sm lg:text-base mb-4">
