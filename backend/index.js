@@ -4,15 +4,49 @@ import postRouter from './routes/post.route.js';
 import commentRouter from './routes/comment.route.js';
 import webHookRouter from './routes/webhook.route.js';
 import connectDb from './lib/connectDb.js';
+import { clerkMiddleware } from '@clerk/express'
+import cors from 'cors';
+
 
 const app = express();
 
+app.use(cors(process.env.CLIENT_URL));
+
+// Clerk Middleware to authenticate the user or give permission to access the routes
+app.use(clerkMiddleware())
+
+// put the webhook router before the json middleware because we need to parse the raw body using bodyParser.raw
+app.use("/webhooks",webHookRouter)
+
 app.use(express.json());
+
+// testing auth state of the user 
+// app.get('/auth-state', (req, res) => {
+
+//   const authState = req.auth
+
+//   res.json({
+//     authState
+//   });
+// });
+
+// app.get("/protect", (req, res) => {
+
+//   const { userId } = req.auth
+//   if(!userId){
+//     return res.status(401).json({
+//       message: "Unauthorized",
+//     });
+//   }
+
+//   res.status(200).json({
+//     message: "Protected route",
+//   }); 
+// });
 
 app.use("/users", userRouter);
 app.use("/posts", postRouter);
 app.use("/comments", commentRouter);
-app.use("/webhooks",webHookRouter)
 
 
 // Error handling middleware global level

@@ -3,8 +3,6 @@ import { IKImage } from "imagekitio-react";
 
 export const ImageKit = ({ src, className, width, height, alt }) => {
   const validSrc = src ? src : null;
-  console.log("ImageKit src:", validSrc);
-
   return validSrc ? (
     <IKImage
       alt={alt}
