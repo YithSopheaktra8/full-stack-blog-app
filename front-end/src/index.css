@@ -23,4 +23,41 @@ font-family: "Montserrat", sans-serif;
 
 .ql-editor {
   border: none !important;
+  padding: 0 !important;
 }
+
+.ql-ui{
+  color: black;
+}
+
+.ql-code-block-container {
+  background-color: #23241f;
+  color: #f8f8f2;
+  overflow: visible;
+  margin-bottom: 5px;
+    margin-top: 5px;
+    padding: 5px 10px;
+    border-radius: 3px;
+}
+
+/* .blog-view{
+  
+  a {
+    color: blue;
+    font-weight: 600;
+    text-decoration: underline;
+  }
+  pre {
+    background-color: black;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: whitesmoke;
+  }
+} */
+
+/* .ql-code-block-container{
+  background-color: #23241F;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+ */

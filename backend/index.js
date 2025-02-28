@@ -20,6 +20,15 @@ app.use("/webhooks",webHookRouter)
 
 app.use(express.json());
 
+// imagekit middleware
+// allow cross-origin requests
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", 
+    "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
+
 // testing auth state of the user 
 // app.get('/auth-state', (req, res) => {
 
